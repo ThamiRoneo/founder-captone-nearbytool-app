@@ -1,6 +1,4 @@
 :root {
-  /* Colour: warm, grounded, "neighbourhood" — not corporate marketplace blue.
-     See DECISION-LOG.md for the reasoning behind this direction. */
   --color-bg: #FBF6EF;
   --color-surface: #FFFFFF;
   --color-text: #2A2420;
@@ -71,7 +69,7 @@ button {
   font-family: inherit;
 }
 
-/* Visible focus ring for keyboard navigation — never remove this. */
+/* Visible focus ring for keyboard navigation */
 :focus-visible {
   outline: 3px solid var(--color-terracotta);
   outline-offset: 2px;
