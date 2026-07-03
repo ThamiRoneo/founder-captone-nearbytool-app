@@ -16,7 +16,7 @@ export function HomePage() {
   return (
     <div className="home-page">
       <header className="home-page__intro">
-        <h1>Borrow from your stoep</h1>
+        <h1>Borrow from your NearbyTools</h1>
         <p>Find tools and equipment from people nearby, instead of buying your own.</p>
       </header>
 
