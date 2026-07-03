@@ -21,7 +21,7 @@ export const ITEMS: Item[] = [
     title: "Cordless Drill (18V)",
     category: "power-tools",
     description: "Solid drill, two batteries, works for most home jobs.",
-    photoUrls: ["https://picsum.photos/seed/drill/600/400"],
+    photoUrls: ["https://pixabay.com/images/download/x-5471252_1920.jpg"],
     price: { amountCents: 5000, period: "day" },
     owner: { id: "usr_a", displayName: "Naledi", rating: 4.8, ratingCount: 24, joinedISO: "2025-02-11" },
     distanceKm: 1.2,
