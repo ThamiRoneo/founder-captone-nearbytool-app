@@ -42,4 +42,4 @@ Everything above is also in the Decision Log with the fuller reasoning and trade
 Land safe. Let's talk when you're back.
 
 — Your frontend engineer
-- Thami Sithole
+Thami Sithole
