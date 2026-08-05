@@ -1,11 +1,3 @@
-/* ============================================================
- * Domain types for the product.
- * These model the data as if a real API were returning it —
- * you do NOT control this shape, so treat it like a contract.
- * You may EXTEND these (add view models, derived types) but do
- * not weaken them. No `any`.
- * ============================================================ */
-
 export type ItemId = string;
 export type UserId = string;
 
