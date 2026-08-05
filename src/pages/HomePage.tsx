@@ -11,16 +11,38 @@ export function HomePage() {
   const { items, isLoading, error } = useItems();
   const [filters, setFilters] = useState<ItemFilters>(DEFAULT_FILTERS);
 
-  const filteredItems = useMemo(() => filterItems(items, filters), [items, filters]);
+  const filteredItems = useMemo(
+    () => filterItems(items, filters),
+    [items, filters],
+  );
 
   return (
     <div className="home-page">
       <header className="home-page__intro">
-        <h1>Borrow from your NearbyTools</h1>
-        <p>Find tools and equipment from people nearby, instead of buying your own.</p>
+        <div className="home-page__intro-copy">
+          <p className="home-page__eyebrow">
+            Neighbourhood lending, made simple
+          </p>
+          <h1>Borrow from your nearby tools</h1>
+          <p>
+            Find trusted gear from neighbours, reserve it, and collect it
+            nearby.
+          </p>
+        </div>
+        <div className="home-page__intro-highlights" aria-label="Highlights">
+          <span className="home-page__highlight-pill">Verified neighbours</span>
+          <span className="home-page__highlight-pill">
+            Free &amp; paid options
+          </span>
+          <span className="home-page__highlight-pill">Same-day pickup</span>
+        </div>
       </header>
 
-      <ItemFiltersBar filters={filters} onChange={setFilters} resultCount={filteredItems.length} />
+      <ItemFiltersBar
+        filters={filters}
+        onChange={setFilters}
+        resultCount={filteredItems.length}
+      />
 
       {isLoading && (
         <p className="home-page__status" role="status">
@@ -37,7 +59,9 @@ export function HomePage() {
       {!isLoading && !error && filteredItems.length === 0 && (
         <div className="home-page__empty">
           <p>No items match your search yet.</p>
-          <p className="home-page__empty-hint">Try widening your distance or clearing a filter.</p>
+          <p className="home-page__empty-hint">
+            Try widening your distance or clearing a filter.
+          </p>
         </div>
       )}
 
