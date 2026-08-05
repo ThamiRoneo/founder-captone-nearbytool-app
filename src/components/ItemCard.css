@@ -1,96 +1,117 @@
 .item-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, var(--color-surface) 0%, #fffaf5 100%);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--radius-lg) + 2px);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 14px 32px rgba(42, 36, 32, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .item-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(42, 36, 32, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(42, 36, 32, 0.12);
 }
 
 .item-card--paused {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .item-card__photo {
-  position: relative;
-  aspect-ratio: 3 / 2;
-  background: var(--color-sage-light);
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--color-sage-light), #f7efe6);
 }
 
 .item-card__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .item-card__photo-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--color-sage);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-sage);
 }
 
 .item-card__badge {
-  position: absolute;
-  top: var(--space-2);
-  left: var(--space-2);
-  background: var(--color-text);
-  color: white;
-  font-size: 0.75rem;
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-2);
+    background: rgba(42, 36, 32, 0.9);
+    color: white;
+    font-size: 0.75rem;
+    padding: var(--space-1) var(--space-2);
+    border-radius: 999px;
 }
 
 .item-card__body {
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
 }
 
 .item-card__title {
-  font-size: 1.05rem;
-  margin-bottom: var(--space-1);
+    font-size: 1.08rem;
+    margin-bottom: var(--space-1);
+    color: var(--color-text);
 }
 
 .item-card__price {
-  margin: 0;
-  color: var(--color-terracotta-dark);
-  font-weight: 600;
+    margin: 0;
+    color: var(--color-terracotta-dark);
+    font-weight: 700;
 }
 
 .item-card__meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  margin-top: var(--space-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+.item-card__owner {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.item-card__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-sage-light);
+    border-radius: 999px;
 }
 
 .item-card__rating--new {
-  color: var(--color-sage);
-  font-weight: 500;
+    color: var(--color-sage);
+    font-weight: 600;
+    background: #eff7ea;
 }
 
 .item-card__footer {
-  display: flex;
-  gap: var(--space-2);
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  margin-top: var(--space-2);
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: auto;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border);
 }
