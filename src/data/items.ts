@@ -6,7 +6,9 @@ export const ITEMS: Item[] = [
     title: "Cordless Drill (18V)",
     category: "power-tools",
     description: "Solid drill, two batteries, works for most home jobs.",
-    photoUrls: ["https://pixabay.com/images/download/x-5471252_1920.jpg"],
+    photoUrls: [
+      "https://imgs.search.brave.com/Td1v36l_rsRB2jwGXohKJ_itds4Fsz5NG39iFoDFrHw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE0LzUxLzMzLzE2/LzM2MF9GXzE0NTEz/MzE2MTVfYmxRU1Fs/TlE2TElaVmJtdDJi/TmhqbUlLQkZNdmZx/NGYuanBn",
+    ],
     price: { amountCents: 5000, period: "day" },
     owner: {
       id: "usr_a",
